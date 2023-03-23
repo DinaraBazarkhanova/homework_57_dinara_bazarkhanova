@@ -4,10 +4,10 @@ from webapp.models import Article
 
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'status', 'text']
-    list_filter = ['id', 'name', 'status', 'text']
+    list_display = ['id', 'title', 'status', 'text']
+    list_filter = ['id', 'title', 'status', 'text']
     search_fields = ['name', 'status']
-    fields = ['name', 'status', 'text', 'created_at', 'updated_at']
+    fields = ['title', 'status', 'text', 'created_at', 'updated_at']
     readonly_fields = ['id', 'created_at', 'updated_at']
 
 
