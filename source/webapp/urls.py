@@ -1,11 +1,11 @@
 from django.urls import path
 
 from webapp.views.articles import add_view, update_view, delete_view, confirm_delete, detail_view
-from webapp.views.base import index_view
+from webapp.views.base import IndexView
 
 urlpatterns = [
-    path('', index_view, name='index'),
-    path('article/', index_view),
+    path('', IndexView.as_view(), name='index'),
+    path('article/', IndexView.as_view()),
     path('article/add/', add_view, name='article_add'),
     path('article/<int:pk>', detail_view, name='article_detail'),
     path('article/<int:pk>/update', update_view, name='article_update'),
