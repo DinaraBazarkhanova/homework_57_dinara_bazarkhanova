@@ -8,10 +8,10 @@ from webapp.models import Article
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
-        fields = ('name', 'email', 'text', 'status')
+        fields = ('title', 'author', 'text', 'status')
         labels = {
-            'name': 'Заголовок статьи',
-            'email': 'Email',
+            'title': 'Заголовок статьи',
+            'author': 'Email',
             'text': 'Текст',
             'status': 'Статус'
         }
